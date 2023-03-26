@@ -7,11 +7,11 @@
 #main {
     width: 100%;
     height: 1000vh;
+    font-family: 'Lexend Deca', sans-serif;
 }
 
 /* header */
 #header {
-    font-family: 'Lexend Deca', sans-serif;
     position: relative;
     width: 100%;
     height: 480px;
@@ -71,7 +71,7 @@
     color: #2f3132;
     letter-spacing: 3px;
     border: 1px solid #fff;
-    transition: background-color 0.5s, color 0.5s, opacity 0.5s;
+    transition: background-color 0.3s, color 0.3s, opacity 0.3s;
 }
 
 #header button:hover {
@@ -196,7 +196,6 @@
 
 #present h4 a {
     font-size: 20px;
-    font-family: 'Lexend Deca', sans-serif;
     color: #2f3132;
     text-decoration: none;
 }
@@ -208,12 +207,10 @@
 #present h6 {
     margin: 5px 0px;
     font-size: 14px;
-    font-family: 'Lexend Deca', sans-serif;
     font-weight: 200;
 }
 
 #present .link a {
-    font-family: 'Lexend Deca', sans-serif;
     color: #2F3132;
     text-decoration: none;
 }
@@ -247,6 +244,7 @@
 .item2 {
     grid-column: 1 / span 1;
     grid-row: 3 / span 2;
+    overflow: hidden;
     position: relative;
 }
 .item3 {
@@ -281,9 +279,7 @@
 }
 
 
-.item1 h3 {
-    font-family: 'Lexend Deca', sans-serif;
-}
+
 
 .item1 .push {
     display: none;
@@ -340,7 +336,6 @@
     border-top-right-radius: 10px ;
      background-color:rgb(217, 244, 239) ;
 }
-
 
 .item2 .push {
     display: none;
@@ -506,6 +501,19 @@
     background-color: #fff;
 }
 
+.item2 .card{
+    position: absolute;
+    bottom: 110px;
+    transition: 0.3s;
+}
+.item2:hover .card{
+    transform: scale(1.1);
+}
+.item2 h3{
+    position: absolute;
+    bottom: 20px;
+    left: 158px;
+}
 
 
 
