@@ -109,26 +109,35 @@
 
 /* header */
 /* Body */
-#body{
+#body {
     width: 100%;
     height: 500vh;
 }
-#present{
-    margin-top: 20px ;
+
+#present {
+    margin-top: 70px;
     height: 70vh;
     width: 100%;
     background-color: aqua;
     display: flex;
 }
-#present .present1,#present .present2,#present .present3{
+
+#present .present1,
+#present .present2,
+#present .present3 {
     margin: 0 30px;
-    width: 30%;
+    width: 100%;
     height: 80%;
     background-color: bisque;
 }
-#present .present1 .image,#present .present2 .image,#present .present3 .image{
+
+#present .present1 .image,
+#present .present2 .image,
+#present .present3 .image {
+    margin-top: 40px;
     width: 80%;
     height: 80%;
+    margin-left: 43px;
     background-color: black;
 }
 
