@@ -1,0 +1,85 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#main {
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.278);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+#box {
+    width: 70%;
+    height: 80vh;
+    background-color: aqua;
+    border-radius: 10px
+}
+
+/* close button */
+#main .close {
+    position: absolute;
+    top: 30px;
+    right: 50px;
+    font-size: 25px;
+    color: #fff;
+    transition: 0.3s;
+}
+
+.close:hover {
+    transform: rotate(180deg);
+}
+
+/* close button */
+
+
+/* img */
+
+.image {
+    width: 60%;
+    height: 100%;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.bigimg {
+    margin-top: 20px;
+    width: 80%;
+    height: 70%;
+    background: url('../../img/mx-keys-mini-combo-business-gallery-us-graphite-1.png') no-repeat center center;
+    background-size: 80%;
+    border-radius: 5px;
+}
+
+.grid-img {
+    position: absolute;
+    bottom: 0;
+    width: 80%;
+    height: 20vh;
+    background-color: blue;
+    display: grid;
+    grid-template-columns: 100px 100px 100px 100px;
+    grid-template-rows: 100px;
+    grid-gap: 20px;
+    margin-left: 10px;
+}
+
+.grid-img div {
+    border-radius: 3px;
+    margin-top: 15px;
+    background-color: red;
+}
+
+.grid-img .img1 {
+    background: url('../../img/mx-keys-mini-top-graphite-us.png') no-repeat center center;
+    background-size: 100%;
+}
+
+/* img */
