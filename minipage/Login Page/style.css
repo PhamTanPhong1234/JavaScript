@@ -77,5 +77,43 @@ form .txt_field {
     top: -5px;
     color: #2691d9;
 }
+.pass{
+    float: right;
+    font-size: 14px;
+    margin-right: 60px;
+}
+.pass a{
+    color: black;
+    transition: 0.1s;
+}
+.pass a:hover{
+    opacity: 0.5;
+}
+
+.input{
+    width: 80%;
+    height: 50px;
+    margin:  30px 11%;
+    border: 3px solid #2f3132;
+    background-color: #2f3132;
+    font-size: 15px;
+    color: white;
+    transition: 0.1s;
+}
+.input:hover{
+    background: none;
+    color: #2f3132;
+}
+.signup_link{
+    width: 100%;
+text-align: center;
+}
+.signup_link a{
+    color: black;
+    transition: 0.1s;
+}
+.signup_link a:hover{
+    opacity: 0.5;
+}
 
 /* element */
