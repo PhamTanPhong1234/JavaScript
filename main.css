@@ -23,7 +23,7 @@ html::-webkit-scrollbar-thumb {
 
 #main {
     width: 100%;
-    height: 1000vh;
+    height: 350vh;
     font-family: 'Lexend Deca', sans-serif;
 }
 
@@ -157,7 +157,6 @@ html::-webkit-scrollbar-thumb {
 /* Body */
 #body {
     width: 100%;
-    height: 500vh;
 }
 
 #present {
@@ -580,7 +579,7 @@ html::-webkit-scrollbar-thumb {
 .item5 h3 {
     position: absolute;
     bottom: 30px;
-    left: 151px;
+    left: 163px;
 }
 
 
@@ -668,14 +667,18 @@ html::-webkit-scrollbar-thumb {
     font-size: 70px;
     color: #FFF;
 }
-.dotcontain{
-position: absolute;
+
+.dotcontain {
+    position: absolute;
     width: 100%;
-}.dotcontain .posi{
+}
+
+.dotcontain .posi {
     width: 100%;
     height: 100%;
     position: relative;
 }
+
 .dotcontain ul {
     position: absolute;
     top: 575px;
@@ -697,11 +700,107 @@ position: absolute;
     display: inline-block;
     border-radius: 100px;
 }
-.dotcontain .dot1{
+
+.dotcontain .dot1 {
     border: 2px solid white;
-    background-color: rgba(255, 255, 255, 0.1)  ;
+    background-color: rgba(255, 255, 255, 0.1);
 
 }
-/* slideshow */
 
+/* slideshow */
+/* footer */
+#footer {
+    position: relative;
+    width: 100%;
+    height: 80vh;
+    background-color: #262a2c;
+}
+
+#footer .box {
+    width: 100%;
+    height: 40vh;
+    display: flex;
+}
+
+#footer .gioithieu {
+
+    margin: 0 100px;
+}
+
+#footer h2 {
+    margin-top: 100px;
+    color: #fff;
+    font-size: 15px;
+}
+
+#footer li {
+    list-style: none;
+    padding: 15px 0px;
+}
+
+#footer a {
+
+    font-weight: 100;
+    color: #fff;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+#footer a:hover {
+    text-decoration: #c4c6c8 underline;
+
+}
+
+#footer .line {
+    position: absolute;
+    top:470px;
+    left: 100px;
+    width: 86%;
+    height: 1px;
+    background-color: #c4c6c8;
+}
+
+.social{
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    height: 10vh;
+
+}
+.social img{
+    margin-left: 100px;
+    margin-top: 10px;
+    width: 100px;
+}
+.social h6{
+    position: absolute;
+    top: 21px;
+    left: 220px;
+    z-index: 1;
+    color: #fff;
+    font-weight: 200;
+    letter-spacing: 1px;
+}
+.social .network{
+    display: flex;
+    float: right;
+    margin-right:80px ; 
+
+}
+.social .network a {
+    padding:0 15px;
+}
+
+.social .network i{
+    color: #979b9b;
+    font-size: 25px;
+    font-weight:500;
+    transition: 0.3s;
+}
+.social .network i:hover{
+    color: #fff;
+    font-size: 30px;
+}
+
+/* footer */
 /* Body */
