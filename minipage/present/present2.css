@@ -170,7 +170,7 @@
     cursor: pointer;
     transition: 0.3s;
 }
-#present2main .text .button .giohang:hover,.text .button .muangay:hover{
+#present2main .text .button .giohang:hover,#present2main .text .button .muangay:hover{
     background-color: black;
     color: #fff;
     font-size: 14px;
