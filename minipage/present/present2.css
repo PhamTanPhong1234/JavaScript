@@ -1,0 +1,187 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#present2main {
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.278);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+#box {
+    width: 70%;
+    height: 80vh;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    display:flex;
+    font-family: 'Lexend Deca',sans-serif;
+}
+
+/* close button */
+#present2main .close {
+    position: absolute;
+    top: 30px;
+    right: 50px;
+    font-size: 25px;
+    color: #fff;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.close:hover {
+    transform: rotate(180deg);
+}
+
+/* close button */
+
+
+/* img */
+
+.image {
+    width: 60%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.bigimg {
+    margin-top: 20px;
+    width: 80%;
+    height: 70%;
+    background: url('../../img/esp-folio-touch-air-gallery-2.png') no-repeat center center;
+    background-size: 100%;
+    border-radius: 5px;
+}
+
+.grid-img {
+    position: absolute;
+    bottom: 40px;
+    left: 30px;
+    width: 80%;
+    height: 20vh;
+    display: grid;
+    grid-template-columns: 120px 120px 120px 120px;
+    grid-template-rows: 100px;
+    grid-gap: 20px;
+
+}
+
+.grid-img div {
+    border-radius: 3px;
+    margin-top: 15px;
+}
+
+.grid-img .img1 {
+    background: url('../../img/folio-touch-air-gallery-1.png') no-repeat center center;
+    background-size: 100%;
+    transition: 0.3s;
+
+}
+
+.grid-img .img1:hover {
+    background-size: 110%;
+}
+
+.grid-img .img2 {
+    background: url('../../img/folio-touch-air-gallery-4.png') no-repeat center center;
+    background-size: 100%;
+    transition: 0.3s;
+}
+
+.grid-img .img2:hover {
+    background-size: 110%;
+}
+
+.grid-img .img3 {
+    background: url('../../img/slim_folio_pro_for_ipad_pro_4_ae210b7d693c4bfaae68ec7e942bdf96_grande.png') no-repeat center center;
+    background-size: 100%;
+    transition: 0.3s;
+}
+
+.grid-img .img3:hover {
+    background-size: 110%;
+}
+
+.grid-img .img4 {
+    background: url('../../img/slim-folio-gallery-1-crayon.png') no-repeat center center;
+    background-size: 100%;
+    transition: 0.3s;
+}
+
+.grid-img .img4:hover {
+    background-size: 110%;
+}
+
+/* img */
+
+/* Text */
+.text{
+    margin-left:40px;
+    width: 35%;
+    height: 100%;
+}
+.text h4{
+    margin-top: 40px;
+    margin-bottom: 20px ;
+}
+.text h5{
+    font-weight: 300;
+    margin: 24px 0;
+}
+.text p{
+    margin-top: 10px;
+    font-weight: 300;
+    margin-right: 20px;
+    letter-spacing: -1;
+    line-height: 21px;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.text .button {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    position: relative;
+}
+.text .button button{
+    width: 145px;
+    height: 50px;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 0 1px;
+  
+}
+.text .button .giohang{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    border-radius: 2px;
+    border: 2px solid black;
+    background: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.text .button .giohang:hover,.text .button .muangay:hover{
+    background-color: black;
+    color: #fff;
+    font-size: 14px;
+}
+
+.text .button .muangay{
+    position: absolute;
+    right: 20px;
+    cursor: pointer;
+    border-radius: 2px;
+    background:none;
+    transition: 0.3s;
+}
+
