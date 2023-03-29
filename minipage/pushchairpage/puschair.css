@@ -64,6 +64,18 @@
     word-spacing: 1px;
     position: relative;
 }
+.total #money h5{
+    position: absolute;
+    bottom :40px;
+    z-index: 2;
+}
+.total #money h4{
+    position: absolute;
+    bottom :40px;
+    z-index: 12;
+    left: 150px;
+    font-weight: 500;
+}
 
 .total #money h1 {
     position: absolute;

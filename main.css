@@ -895,6 +895,18 @@ html::-webkit-scrollbar-thumb {
     left: 45%;
 
 }
+.total #money h5{
+    position: absolute;
+    bottom :40px;
+    z-index: 2;
+}
+.total #money h4{
+    position: absolute;
+    bottom :40px;
+    z-index: 12;
+    left: 150px;
+    font-weight: 500;
+}
 
 .total #button {
     position: absolute;
