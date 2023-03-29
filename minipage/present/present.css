@@ -31,6 +31,7 @@
     font-size: 25px;
     color: #fff;
     transition: 0.3s;
+    cursor: pointer;
 }
 
 .close:hover {
@@ -166,6 +167,7 @@
     border-radius: 2px;
     border: 2px solid black;
     background: none;
+    cursor: pointer;
     transition: 0.3s;
 }
 .text .button .giohang:hover,.text .button .muangay:hover{
@@ -177,6 +179,7 @@
 .text .button .muangay{
     position: absolute;
     right: 20px;
+    cursor: pointer;
     border-radius: 2px;
     background:none;
     transition: 0.3s;

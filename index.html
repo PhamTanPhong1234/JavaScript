@@ -13,7 +13,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100;200;300;500;600;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="./font/themify-icons/themify-icons.css">
-    <link rel="stylesheet" href="./html.js">
+    <link rel="stylesheet" href="main.js">
 
 
 <body>
@@ -36,10 +36,41 @@
                 </button>
             </div>
             <div class="shopping_cart">
-                <a id="cart" href="#"><i class="ti-shopping-cart"></i></a>
+                <a onclick="openBtn()" id="cart"><i class="ti-shopping-cart"></i></a>
             </div>
             <div class="loginbutton">
                 <a href="./minipage/loginpage/login.html" style="font-size: 17px ;"><i class="login ti-user"></i></a>
+            </div>
+        </div>
+        <div id="puschair">
+            <div id="box">
+                <div class="logo">
+                    <i onclick="closeBtn()" class="ti-close"></i>
+                    <img src="../../img/Logitech-Logo.png" alt="" style="width: 100px;">
+                </div>
+
+                <div id="sanpham">
+                    <div class="thongbao">
+                        <i class="ti-more" style="font-size: 50px;"></i>
+                        <h2>Opp! Bạn chưa chọn sản phẩm</h2>
+                        <h4>Hãy Lựa chọn và quay lại sau nhé
+                        </h4>
+                    </div>
+                    <!--  -->
+                </div>
+                <div class="total">
+                    <div id="money">
+                        Tổng tiền: <h1><span>$</span>0 </h1>
+                    </div>
+                    <div id="button">
+                        <button class="giamgia">
+                            Mã Giảm Giá
+                        </button>
+                        <button class="mua">
+                            Mua Ngay
+                        </button>
+                    </div>
+                </div>
             </div>
 
         </div>
@@ -68,10 +99,39 @@
                     <span class="link"><a href="">Khám phá Logitech Zone Vibe</a><i class="arrow ti-angle-right"
                             style="font-size: 13px;"></i></span>
                 </div>
+            </div>
+            <div id="puschair">
+                <div id="box">
+                    <div class="logo">
+                        <i class="ti-close"></i>
+                        <img src="../../img/Logitech-Logo.png" alt="" style="width: 100px;">
+                    </div>
 
+                    <div id="sanpham">
+                        <div class="thongbao">
+                            <i class="ti-more" style="font-size: 50px;"></i>
+                            <h2>Opp! Bạn chưa chọn sản phẩm</h2>
+                            <h4>Hãy Lựa chọn và quay lại sau nhé
+                            </h4>
+                        </div>
+                        <!--  -->
+                    </div>
+                    <div class="total">
+                        <div id="money">
+                            Tổng tiền: <h1><span>$</span>0 </h1>
+                        </div>
+                        <div id="button">
+                            <button class="giamgia">
+                                Mã Giảm Giá
+                            </button>
+                            <button class="mua">
+                                Mua Ngay
+                            </button>
+                        </div>
+                    </div>
+                </div>
 
             </div>
-
             <div id="bestsaler">
                 <div class="grid-container">
                     <div class="grid-item item1">
@@ -222,7 +282,7 @@
             </div>
         </div>
     </div>
-
+    <script src="./main.js"></script>
     </div>
     </div>
 </body>
