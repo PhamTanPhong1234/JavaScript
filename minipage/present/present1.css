@@ -14,7 +14,7 @@
     position: relative;
 }
 
-#box {
+#present1main #box {
     width: 70%;
     height: 80vh;
     background-color: #f4f4f4;
@@ -34,7 +34,7 @@
     cursor: pointer;
 }
 
-.close:hover {
+#present1main .close:hover {
     transform: rotate(180deg);
 }
 
@@ -43,7 +43,7 @@
 
 /* img */
 
-.image {
+#present1main .image {
     width: 60%;
     height: 100%;
     display: flex;
@@ -51,7 +51,7 @@
     position: relative;
 }
 
-.bigimg {
+#present1main .bigimg {
     margin-top: 20px;
     width: 80%;
     height: 70%;
@@ -60,7 +60,7 @@
     border-radius: 5px;
 }
 
-.grid-img {
+#present1main .grid-img {
     position: absolute;
     bottom: 40px;
     left: 30px;
@@ -73,69 +73,69 @@
 
 }
 
-.grid-img div {
+#present1main .grid-img div {
     border-radius: 3px;
     margin-top: 15px;
 }
 
-.grid-img .img1 {
+#present1main .grid-img .img1 {
     background: url('../../img/tablet-img-test1.png') no-repeat center center;
     background-size: 100%;
     transition: 0.3s;
 
 }
 
-.grid-img .img1:hover {
+#present1main .grid-img .img1:hover {
     background-size: 110%;
 }
 
-.grid-img .img2 {
+#present1main .grid-img .img2 {
     background: url('../../img/mx-anywhere-3-product-gallery-graphite-top.png') no-repeat center center;
     background-size: 100%;
     transition: 0.3s;
 }
 
-.grid-img .img2:hover {
+#present1main .grid-img .img2:hover {
     background-size: 110%;
 }
 
-.grid-img .img3 {
+#present1main .grid-img .img3 {
     background: url('../../img/mx-keys-mini-top-graphite-us.png') no-repeat center center;
     background-size: 100%;
     transition: 0.3s;
 }
 
-.grid-img .img3:hover {
+#present1main .grid-img .img3:hover {
     background-size: 110%;
 }
 
-.grid-img .img4 {
+#present1main .grid-img .img4 {
     background: url('../../img/mx-keys-mini-business-keyboard-gallery-us-int-pale-gray-1.png') no-repeat center center;
     background-size: 100%;
     transition: 0.3s;
 }
 
-.grid-img .img4:hover {
+#present1main .grid-img .img4:hover {
     background-size: 110%;
 }
 
 /* img */
 
 /* Text */
-.text{
+#present1main .text{
     margin-left:40px;
     width: 35%;
     height: 100%;
 }
-.text h4{
+#present1main .text h4{
     margin-top: 40px;
     margin-bottom: 20px ;
 }
-.text h5{
+#present1main .text h5{
     font-weight: 300;
     margin: 24px 0;
 }
-.text p{
+#present1main .text p{
     margin-top: 10px;
     font-weight: 300;
     margin-right: 20px;
@@ -145,14 +145,14 @@
     text-justify: inter-word;
 }
 
-.text .button {
+#present1main .text .button {
     width: 100%;
     display: flex;
     justify-content: center;
     margin-top: 50px;
     position: relative;
 }
-.text .button button{
+#present1main .text .button button{
     width: 145px;
     height: 50px;
     font-size: 12px;
@@ -160,7 +160,7 @@
     padding: 0 1px;
   
 }
-.text .button .giohang{
+#present1main .text .button .giohang{
     position: absolute;
     top: 0px;
     left: 0px;
@@ -170,13 +170,13 @@
     cursor: pointer;
     transition: 0.3s;
 }
-.text .button .giohang:hover,.text .button .muangay:hover{
+#present1main .text .button .giohang:hover,.text .button .muangay:hover{
     background-color: black;
     color: #fff;
     font-size: 14px;
 }
 
-.text .button .muangay{
+#present1main .text .button .muangay{
     position: absolute;
     right: 20px;
     cursor: pointer;

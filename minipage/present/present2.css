@@ -14,7 +14,7 @@
     position: relative;
 }
 
-#box {
+#presen2main #box {
     width: 70%;
     height: 80vh;
     background-color: #f4f4f4;
@@ -34,7 +34,7 @@
     cursor: pointer;
 }
 
-.close:hover {
+#present2main .close:hover {
     transform: rotate(180deg);
 }
 
@@ -43,7 +43,7 @@
 
 /* img */
 
-.image {
+#present2main .image {
     width: 60%;
     height: 100%;
     display: flex;
@@ -73,7 +73,7 @@
 
 }
 
-.grid-img div {
+#present2main .grid-img div {
     border-radius: 3px;
     margin-top: 15px;
 }
@@ -122,12 +122,12 @@
 /* img */
 
 /* Text */
-.text{
+#present2main .text{
     margin-left:40px;
     width: 35%;
     height: 100%;
 }
-.text h4{
+#present2main .text h4{
     margin-top: 40px;
     margin-bottom: 20px ;
 }
@@ -152,7 +152,7 @@
     margin-top: 50px;
     position: relative;
 }
-.text .button button{
+#present2main .text .button button{
     width: 145px;
     height: 50px;
     font-size: 12px;
@@ -160,7 +160,7 @@
     padding: 0 1px;
   
 }
-.text .button .giohang{
+#present2main .text .button .giohang{
     position: absolute;
     top: 0px;
     left: 0px;
@@ -170,13 +170,13 @@
     cursor: pointer;
     transition: 0.3s;
 }
-.text .button .giohang:hover,.text .button .muangay:hover{
+#present2main .text .button .giohang:hover,.text .button .muangay:hover{
     background-color: black;
     color: #fff;
     font-size: 14px;
 }
 
-.text .button .muangay{
+#present2main .text .button .muangay{
     position: absolute;
     right: 20px;
     cursor: pointer;
