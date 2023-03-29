@@ -3,7 +3,9 @@
     margin: 0;
     box-sizing: border-box;
 }
-
+html {
+    scroll-behavior: smooth;
+}
 html::-webkit-scrollbar {
     width: 8px;
 
@@ -105,7 +107,7 @@ html::-webkit-scrollbar-thumb {
     margin-top: 10px;
     margin-right: 10px;
     margin-left: 10px;
- 
+
 }
 
 .shopping_cart #cart {
@@ -812,10 +814,9 @@ html::-webkit-scrollbar-thumb {
 /* minipage */
 
 #puschair {
-    animation: 0.1s;
     width: 100%;
     height: 100vh;
-    background-color: rgba(0, 0, 0, 0.519);
+    background-color: rgba(0, 0, 0, 0.284);
     display: none;
     position: fixed;
     top: 50%;
@@ -825,12 +826,14 @@ html::-webkit-scrollbar-thumb {
     display: none;
 
 }
-.fixed{
+
+/* .fixed{
     position: fixed;
     top: 0;
     left: 0;
+    z-index: 12;
     overflow: hidden;
-}
+} */
 
 #puschair #box {
     width: 30%;
@@ -847,7 +850,6 @@ html::-webkit-scrollbar-thumb {
 #puschair #sanpham {
     width: 100%;
     height: 60vh;
-
     overflow: hidden;
 }
 
@@ -858,7 +860,9 @@ html::-webkit-scrollbar-thumb {
     font-size: 20px;
     font-weight: 700;
     transition: 0.3s;
+    transition-delay: 0.2s;
     cursor: pointer;
+
 }
 
 .logo i:hover {
@@ -927,21 +931,23 @@ html::-webkit-scrollbar-thumb {
 
 .total #button .mua {
     border-radius: 2px;
-    background-color: #f4f4f4;
+    border: 2px solid black;
+    background: none;
     cursor: pointer;
     transition: 0.3s;
 }
 
 .total #button .mua:hover {
-    background: none;
+    background-color: black;
+    color: #fff;
     font-size: 17px;
-    border: 2px solid black;
 }
+
 /* san pham */
-#sanpham{
+#sanpham {
     width: 100%;
     height: 100%;
-    display:flex;
+    display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
