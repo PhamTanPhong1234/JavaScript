@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 
-#present3main {
+#present4main {
     width: 100%;
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.278);
@@ -14,7 +14,7 @@
     position: relative;
 }
 
-#present3main #box {
+#present4main #box {
     width: 70%;
     height: 80vh;
     background-color: #f4f4f4;
@@ -24,7 +24,7 @@
 }
 
 /* close button */
-#present3main .close {
+#present4main .close {
     position: absolute;
     top: 30px;
     right: 50px;
@@ -34,7 +34,7 @@
     cursor: pointer;
 }
 
-#present3main .close:hover {
+#present4main .close:hover {
     transform: rotate(180deg);
 }
 
@@ -43,7 +43,7 @@
 
 /* img */
 
-#present3main .image {
+#present4main .image {
     width: 60%;
     height: 100%;
     display: flex;
@@ -51,16 +51,16 @@
     position: relative;
 }
 
-#present3main .bigimg {
+#present4main .bigimg {
     margin-top: 20px;
     width: 80%;
     height: 70%;
-    background: url('../../img/4k-pro-gallery-1.png') no-repeat center center;
-    background-size: 90%;
+    background: url('../../img/zone-vibe-100-gallery-white-1.png') no-repeat center center;
+    background-size: 80%;
     border-radius: 5px;
 }
 
-#present3main .grid-img {
+#present4main .grid-img {
     position: absolute;
     bottom: 40px;
     left: 30px;
@@ -73,69 +73,69 @@
 
 }
 
-#present3main .grid-img div {
+#present4main .grid-img div {
     border-radius: 3px;
     margin-top: 15px;
 }
 
-#present3main .grid-img .img1 {
-    background: url('../../img/brio-gallery-2.png') no-repeat center center;
-    background-size: 100%;
+#present4main .grid-img .img1 {
+    background: url('../../img/28583-zone-vibe-100-gallery-white-4.png') no-repeat center center;
+    background-size: 90%;
     transition: 0.3s;
 
 }
 
-#present3main .grid-img .img1:hover {
-    background-size: 110%;
+#present4main .grid-img .img1:hover {
+    background-size: 100%;
 }
 
-#present3main .grid-img .img2 {
-    background: url('../../img/brio-gallery-3.png') no-repeat center center;
-    background-size: 100%;
+#present4main .grid-img .img2 {
+    background: url('../../img/28583-zone-vibe-100-gallery-white-5.png') no-repeat center center;
+    background-size: 90%;
     transition: 0.3s;
 }
 
-#present3main .grid-img .img2:hover {
-    background-size: 110%;
+#present4main .grid-img .img2:hover {
+    background-size: 100%;
 }
 
-#present3main .grid-img .img3 {
-    background: url('../../img/30573_webcam_logitech_brio_ultra_hd_pro_4.png') no-repeat center center;
-    background-size: 100%;
+#present4main .grid-img .img3 {
+    background: url('../../img/28583-zone-vibe-100-gallery-white-6.png') no-repeat center center;
+    background-size: 80%;
     transition: 0.3s;
 }
 
-#present3main .grid-img .img3:hover {
-    background-size: 110%;
+#present4main .grid-img .img3:hover {
+    background-size: 90%;
 }
 
-#present3main .grid-img .img4 {
-    background: url('../../img/briopictograms__2__grande.png') no-repeat center center;
-    background-size: 100%;
+#present4main .grid-img .img4 {
+    background: url('../../img/zone-vibe-100-less-weight-more-comfort.png') no-repeat center center;
+    background-size: 70%;
     transition: 0.3s;
 }
 
-#present3main .grid-img .img4:hover {
-    background-size: 110%;
+#present4main .grid-img .img4:hover {
+    background-size: 80%;
 }
 
 /* img */
 
 /* Text */
-#present3main .text{
+#present4main .text{
     margin-left:40px;
     width: 35%;
     height: 100%;
 }
-#present3main .text h4{
+#present4main .text h4{
     margin-top: 40px;
     margin-bottom: 20px ;
 }
-#present3main .text h5{
+#present4main .text h5{
     font-weight: 300;
     margin: 24px 0;
 }
-#present3main .text p{
+#present4main .text p{
     margin-top: 10px;
     font-weight: 300;
     margin-right: 20px;
@@ -145,14 +145,14 @@
     text-justify: inter-word;
 }
 
-#present3main .text .button {
+#present4main .text .button {
     width: 100%;
     display: flex;
     justify-content: center;
     margin-top: 50px;
     position: relative;
 }
-#present3main .text .button button{
+#present4main .text .button button{
     width: 145px;
     height: 50px;
     font-size: 12px;
@@ -160,7 +160,7 @@
     padding: 0 1px;
   
 }
-#present3main .text .button .giohang{
+#present4main .text .button .giohang{
     position: absolute;
     top: 0px;
     left: 0px;
@@ -170,13 +170,13 @@
     cursor: pointer;
     transition: 0.3s;
 }
-#present3main .text .button .giohang:hover,#present3main .text .button .muangay:hover{
+#present4main .text .button .giohang:hover,#present4main .text .button .muangay:hover{
     background-color: black;
     color: #fff;
     font-size: 14px;
 }
 
-#present3main .text .button .muangay{
+#present4main .text .button .muangay{
     position: absolute;
     right: 20px;
     cursor: pointer;
