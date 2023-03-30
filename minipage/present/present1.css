@@ -56,7 +56,7 @@
     width: 80%;
     height: 70%;
     background: url('../../img/mx-keys-mini-combo-business-gallery-us-graphite-1.png') no-repeat center center;
-    background-size: 100%;
+    background-size: 80%;
     border-radius: 5px;
 }
 
@@ -80,13 +80,13 @@
 
 #present1main .grid-img .img1 {
     background: url('../../img/tablet-img-test1.png') no-repeat center center;
-    background-size: 100%;
+    background-size: 90%;
     transition: 0.3s;
 
 }
 
 #present1main .grid-img .img1:hover {
-    background-size: 110%;
+    background-size: 100%;
 }
 
 #present1main .grid-img .img2 {

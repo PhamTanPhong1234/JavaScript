@@ -22,10 +22,10 @@
             <div class="image">
                 <div class="bigimg"></div>
                 <div class="grid-img">
-                    <div class="img1"></div>
-                    <div class="img2"></div>
-                    <div class="img3"></div>
-                    <div class="img4"></div>
+                    <div onclick="clickImg11()" class="img1"></div>
+                    <div onclick="clickImg21()" class="img2"></div>
+                    <div onclick="clickImg31()" class="img3"></div>
+                    <div onclick="clickImg41()" class="img4"></div>
                 </div>
 
             </div>
@@ -45,6 +45,43 @@
             </div>
         </div>
     </div>
+    <script>
+        
+        const div1present = document.querySelector("#present1main .bigimg");
+        const img11 = document.querySelector("#present1main .img1");
+        const img21 = document.querySelector("#present1main .img2");
+        const img31 = document.querySelector("#present1main .img3");
+        const img41 = document.querySelector("#present1main .img4");
+
+        function clickImg11() {
+            div1present.style.backgroundImage = " url('../../img/tablet-img-test1.png')";
+            img11.style.borderBottom ="2px solid #000";
+            img21.style.borderBottom ="none";
+            img31.style.borderBottom ="none";
+            img41.style.borderBottom ="none";
+
+        }; function clickImg21() {
+            div1present.style.backgroundImage = "url('../../img/mx-anywhere-3-product-gallery-graphite-top.png')";
+            img21.style.borderBottom ="2px solid #000";
+            img11.style.borderBottom ="none";
+            img31.style.borderBottom ="none";
+            img41.style.borderBottom ="none";
+            
+        }; function clickImg31() {
+            div1present.style.backgroundImage = "url('../../img/mx-keys-mini-top-graphite-us.png')";
+            img31.style.borderBottom ="2px solid #000";
+            img41.style.borderBottom ="none";
+            img11.style.borderBottom ="none";
+            img21.style.borderBottom ="none";
+        }; function clickImg41() {
+            div1present.style.backgroundImage = "url('../../img/mx-keys-mini-business-keyboard-gallery-us-int-pale-gray-1.png')";
+            img41.style.borderBottom ="2px solid #000";
+            img11.style.borderBottom ="none";
+            img21.style.borderBottom ="none";
+            img31.style.borderBottom ="none";
+        };
+    </script>
+    </script>
 </body>
 
 </html>
