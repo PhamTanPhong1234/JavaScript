@@ -91,16 +91,16 @@
 
 #present3main .grid-img .img2 {
     background: url('../../img/brio-gallery-3.png') no-repeat center center;
-    background-size: 100%;
+    background-size: 60%;
     transition: 0.3s;
 }
 
 #present3main .grid-img .img2:hover {
-    background-size: 110%;
+    background-size: 70%;
 }
 
 #present3main .grid-img .img3 {
-    background: url('../../img/30573_webcam_logitech_brio_ultra_hd_pro_4.png') no-repeat center center;
+    background: url('../../img/4k-pro-gallery-1.png') no-repeat center center;
     background-size: 100%;
     transition: 0.3s;
 }

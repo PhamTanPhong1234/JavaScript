@@ -56,7 +56,7 @@
     width: 80%;
     height: 70%;
     background: url('../../img/esp-folio-touch-air-gallery-2.png') no-repeat center center;
-    background-size: 100%;
+    background-size: 90%;
     border-radius: 5px;
 }
 
@@ -74,7 +74,7 @@
 }
 
 #present2main .grid-img div {
-    border-radius: 3px;
+
     margin-top: 15px;
 }
 
@@ -101,12 +101,12 @@
 
 #present2main .grid-img .img3 {
     background: url('../../img/slim_folio_pro_for_ipad_pro_4_ae210b7d693c4bfaae68ec7e942bdf96_grande.png') no-repeat center center;
-    background-size: 100%;
+    background-size: 80%;
     transition: 0.3s;
 }
 
 #present2main .grid-img .img3:hover {
-    background-size: 110%;
+    background-size: 90%;
 }
 
 #present2main .grid-img .img4 {

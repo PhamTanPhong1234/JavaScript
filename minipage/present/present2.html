@@ -22,10 +22,10 @@
             <div class="image">
                 <div class="bigimg"></div>
                 <div class="grid-img">
-                    <div class="img1"></div>
-                    <div class="img2"></div>
-                    <div class="img3"></div>
-                    <div class="img4"></div>
+                    <div onclick="clickImg12()" class="img1"></div>
+                    <div onclick="clickImg22()" class="img2"></div>
+                    <div onclick="clickImg32()" class="img3"></div>
+                    <div onclick="clickImg42()" class="img4"></div>
                 </div>
 
             </div>
@@ -44,6 +44,43 @@
             </div>
         </div>
     </div>
+    <script>
+
+        const div2present = document.querySelector("#present2main .bigimg");
+        const img12 = document.querySelector("#present2main .img1");
+        const img22 = document.querySelector("#present2main .img2");
+        const img32 = document.querySelector("#present2main .img3");
+        const img42 = document.querySelector("#present2main .img4");
+
+        function clickImg12() {
+            div2present.style.backgroundImage = " url('../../img/folio-touch-air-gallery-1.png')";
+            img12.style.borderBottom = "2px solid #000";
+            img22.style.borderBottom = "none";
+            img32.style.borderBottom = "none";
+            img42.style.borderBottom = "none";
+
+        }; function clickImg22() {
+            div2present.style.backgroundImage = "url('../../img/folio-touch-air-gallery-4.png') ";
+            img22.style.borderBottom = "2px solid #000";
+            img12.style.borderBottom = "none";
+            img32.style.borderBottom = "none";
+            img42.style.borderBottom = "none";
+
+        }; function clickImg32() {
+            div2present.style.backgroundImage = "url('../../img/slim_folio_pro_for_ipad_pro_4_ae210b7d693c4bfaae68ec7e942bdf96_grande.png')";
+            img32.style.borderBottom = "2px solid #000";
+            img42.style.borderBottom = "none";
+            img12.style.borderBottom = "none";
+            img22.style.borderBottom = "none";
+        }; function clickImg42() {
+            div2present.style.backgroundImage = "url('../../img/folio-touch-air-gallery-5.png')";
+            img42.style.borderBottom = "2px solid #000";
+            img12.style.borderBottom = "none";
+            img22.style.borderBottom = "none";
+            img32.style.borderBottom = "none";
+        };
+    </script>
+    
 </body>
 
 </html>

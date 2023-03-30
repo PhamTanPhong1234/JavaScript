@@ -22,10 +22,10 @@
             <div class="image">
                 <div class="bigimg"></div>
                 <div class="grid-img">
-                    <div class="img1"></div>
-                    <div class="img2"></div>
-                    <div class="img3"></div>
-                    <div class="img4"></div>
+                    <div onclick="clickImg13()" class="img1"></div>
+                    <div onclick="clickImg23()" class="img2"></div>
+                    <div onclick="clickImg33()" class="img3"></div>
+                    <div onclick="clickImg43()" class="img4"></div>
                 </div>
 
             </div>
@@ -44,6 +44,43 @@
             </div>
         </div>
     </div>
+    <script>
+
+        const div3present = document.querySelector("#present3main .bigimg");
+        const img13 = document.querySelector("#present3main .img1");
+        const img23 = document.querySelector("#present3main .img2");
+        const img33 = document.querySelector("#present3main .img3");
+        const img43 = document.querySelector("#present3main .img4");
+
+        function clickImg13() {
+            div3present.style.backgroundImage = "url('../../img/brio-gallery-2.png')";
+            img13.style.borderBottom = "2px solid #000";
+            img23.style.borderBottom = "none";
+            img33.style.borderBottom = "none";
+            img43.style.borderBottom = "none";
+
+        }; function clickImg23() {
+            div3present.style.backgroundImage = "url('../../img/brio-gallery-3.png')  ";
+            img23.style.borderBottom = "2px solid #000";
+            img13.style.borderBottom = "none";
+            img33.style.borderBottom = "none";
+            img43.style.borderBottom = "none";
+
+        }; function clickImg33() {
+            div3present.style.backgroundImage = "url('../../img/4k-pro-gallery-1.png')";
+            img33.style.borderBottom = "2px solid #000";
+            img43.style.borderBottom = "none";
+            img13.style.borderBottom = "none";
+            img23.style.borderBottom = "none";
+        }; function clickImg43() {
+            div3present.style.backgroundImage = "url('../../img/briopictograms__2__grande.png')";
+            img43.style.borderBottom = "2px solid #000";
+            img13.style.borderBottom = "none";
+            img23.style.borderBottom = "none";
+            img33.style.borderBottom = "none";
+        };
+    </script>
+    
 </body>
 
 </html>
