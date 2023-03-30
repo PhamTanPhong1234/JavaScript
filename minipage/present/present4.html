@@ -22,10 +22,10 @@
             <div class="image">
                 <div class="bigimg"></div>
                 <div class="grid-img">
-                    <div class="img1"></div>
-                    <div class="img2"></div>
-                    <div class="img3"></div>
-                    <div class="img4"></div>
+                    <div onclick="clickImg14()" class="img1"></div>
+                    <div onclick="clickImg24()" class="img2"></div>
+                    <div onclick="clickImg34()" class="img3"></div>
+                    <div onclick="clickImg44()" class="img4"></div>
                 </div>
 
             </div>
@@ -44,7 +44,41 @@
             </div>
         </div>
     </div>
+    <script>
+        const div4present = document.querySelector("#present4main .bigimg");
+        const img14 = document.querySelector("#present4main .img1");
+        const img24 = document.querySelector("#present4main .img2");
+        const img34 = document.querySelector("#present4main .img3");
+        const img44 = document.querySelector("#present4main .img4");
+
+        function clickImg14() {
+            div4present.style.backgroundImage = "url('../../img/28583-zone-vibe-100-gallery-white-4.png')";
+            img14.style.borderBottom ="2px solid #000";
+            img24.style.borderBottom ="none";
+            img34.style.borderBottom ="none";
+            img44.style.borderBottom ="none";
+
+        }; function clickImg24() {
+            div4present.style.backgroundImage = "url('../../img/28583-zone-vibe-100-gallery-white-5.png')";
+            img24.style.borderBottom ="2px solid #000";
+            img14.style.borderBottom ="none";
+            img34.style.borderBottom ="none";
+            img44.style.borderBottom ="none";
+            
+        }; function clickImg34() {
+            div4present.style.backgroundImage = " url('../../img/28583-zone-vibe-100-gallery-white-6.png')";
+            img34.style.borderBottom ="2px solid #000";
+            img44.style.borderBottom ="none";
+            img14.style.borderBottom ="none";
+            img24.style.borderBottom ="none";
+        }; function clickImg44() {
+            div4present.style.backgroundImage = " url('../../img/zone-vibe-100-gallery-white-1.png')";
+            img44.style.borderBottom ="2px solid #000";
+            img14.style.borderBottom ="none";
+            img24.style.borderBottom ="none";
+            img34.style.borderBottom ="none";
+        };
+    </script>
 </body>
 
 </html>
-

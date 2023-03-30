@@ -74,7 +74,6 @@
 }
 
 #present4main .grid-img div {
-    border-radius: 3px;
     margin-top: 15px;
 }
 
@@ -91,12 +90,12 @@
 
 #present4main .grid-img .img2 {
     background: url('../../img/28583-zone-vibe-100-gallery-white-5.png') no-repeat center center;
-    background-size: 90%;
+    background-size: 80%;
     transition: 0.3s;
 }
 
 #present4main .grid-img .img2:hover {
-    background-size: 100%;
+    background-size: 90%;
 }
 
 #present4main .grid-img .img3 {
@@ -110,13 +109,13 @@
 }
 
 #present4main .grid-img .img4 {
-    background: url('../../img/zone-vibe-100-less-weight-more-comfort.png') no-repeat center center;
-    background-size: 70%;
+    background: url('../../img/zone-vibe-100-gallery-white-1.png') no-repeat center center;
+    background-size: 60%;
     transition: 0.3s;
 }
 
 #present4main .grid-img .img4:hover {
-    background-size: 80%;
+    background-size: 70%;
 }
 
 /* img */
