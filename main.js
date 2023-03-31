@@ -2,6 +2,7 @@
 var div = document.getElementById('puschair');
 function openBtn() {
     div.style.display = "block";
+    div.toggle(1000);
 }
 function closeBtn() {
     div.style.display = "none";
