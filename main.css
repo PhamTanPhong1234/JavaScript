@@ -899,6 +899,7 @@ html::-webkit-scrollbar-thumb {
     position: absolute;
     bottom :40px;
     z-index: 2;
+    font-weight: 300;
 }
 .total #money h4{
     position: absolute;
