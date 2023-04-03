@@ -230,46 +230,55 @@ var price = document.querySelector('.price');
 var btnAdd = document.querySelectorAll("#bestsaler .giohang");
 var cart = document.querySelector('#sanpham');
 var countBtn = 0;
-var plusAdd = document.querySelectorAll('#body plus');
-function addProduct(item) {
+var plusAdd = document.querySelectorAll('#bestsaler .plus');
+
+
+for (const item1 of btnAdd) {
+    item1.onclick = function () {
+        addProduct1(this);
+    };
+}
+ for (const plusBtn of plusAdd) {
+    plusBtn.addEventListener('click', function () {
+        let item1 = this.parentElement.parentElement.parentElement.querySelector('.giohang');
+        addProduct1(item1);
+    });
+}
+function addProduct1(item1) {
     em.style.display = 'none';
-    var bo = item.parentElement.parentElement.parentElement.parentElement.querySelector(".product").cloneNode(true);
-    var deleteBtn = bo.querySelector(".delete");
+    var bo1 = item1.parentElement.parentElement.parentElement.parentElement.querySelector(".product").cloneNode(true);
+    var deleteBtn = bo1.querySelector(".delete");
     deleteBtn.addEventListener("click", function () {
-        bo.remove();
+        bo1.remove();
         countBtn--;
-        updateCount(); 
+        updateCount();
         tinhTien();
     });
-    cart.appendChild(bo);
+    cart.appendChild(bo1);
     countBtn++;
-    updateCount(); 
-      tinhTien();
+    updateCount();
+    tinhTien();
 }
-function updateCount(){
+function updateCount() {
     var soluongsp = document.querySelector(".soluongsp");
     soluongsp.textContent = countBtn;
 }
 
-for (const item of btnAdd) {
-    item.onclick = function () {   
-        addProduct(this);
-    };
-}
-for (const item of plusAdd) {
-    item.onclick = function () {   
-        addProduct(this);
-    };
-}
 
 function tinhTien() {
     let bao = cart.getElementsByClassName('product');
-    var tong = 0;   
+    var tong = 0;
     for (const item of bao) {
         let td = item.getElementsByClassName('cost')[0];
         let gia = parseInt(td.innerText);
         tong += gia * 1;
     }
-    price.innerText = "$" +" "+ tong ;
+    price.innerHTML = "$" + " " + tong;
 }
+
+
+
+
+
+
 // Mua ngay js
