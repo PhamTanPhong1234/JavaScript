@@ -2,12 +2,10 @@
 var div = document.getElementById('puschair');
 function openBtn() {
     div.style.display = "block";
-    div.toggle(1000);
 }
 function closeBtn() {
     div.style.display = "none";
 }
-
 const pr1 = document.querySelector("#present1main");
 const pr2 = document.querySelector("#present2main");
 const pr3 = document.querySelector("#present3main");
@@ -197,29 +195,68 @@ function clickImg14() {
 };
 function clickImg15() {
     div5present.style.backgroundImage = "url('../../img/9481_pop_keys_gallery_blast_4.png')";
-    img15.style.borderBottom ="2px solid #000";
-    img25.style.borderBottom ="none";
-    img35.style.borderBottom ="none";
-    img45.style.borderBottom ="none";
+    img15.style.borderBottom = "2px solid #000";
+    img25.style.borderBottom = "none";
+    img35.style.borderBottom = "none";
+    img45.style.borderBottom = "none";
 
 }; function clickImg25() {
     div5present.style.backgroundImage = "url('../../img/ban-phim-khong-day-logitech-pop-keys-longbinh.com.vn7.png')";
-    img25.style.borderBottom ="2px solid #000";
-    img15.style.borderBottom ="none";
-    img35.style.borderBottom ="none";
-    img45.style.borderBottom ="none";
-    
+    img25.style.borderBottom = "2px solid #000";
+    img15.style.borderBottom = "none";
+    img35.style.borderBottom = "none";
+    img45.style.borderBottom = "none";
+
 }; function clickImg35() {
     div5present.style.backgroundImage = "url('../../img/08496126__3__9799524b7b7e448795bca6d859585ab4_d2c0eb828660421183b6b5553d980ff9_master.png')";
-    img35.style.borderBottom ="2px solid #000";
-    img45.style.borderBottom ="none";
-    img15.style.borderBottom ="none";
-    img25.style.borderBottom ="none";
+    img35.style.borderBottom = "2px solid #000";
+    img45.style.borderBottom = "none";
+    img15.style.borderBottom = "none";
+    img25.style.borderBottom = "none";
 }; function clickImg45() {
     div5present.style.backgroundImage = "url('../../img/pop-keys-gallery-daydream-6.png')";
-    img45.style.borderBottom ="2px solid #000";
-    img15.style.borderBottom ="none";
-    img25.style.borderBottom ="none";
-    img35.style.borderBottom ="none";
+    img45.style.borderBottom = "2px solid #000";
+    img15.style.borderBottom = "none";
+    img25.style.borderBottom = "none";
+    img35.style.borderBottom = "none";
 };
 // present
+
+// Mua ngay js 
+
+// san pham 1
+var em = document.querySelector('#sanpham .thongbao');
+var price = document.querySelector('.price');
+var btnAdd = document.querySelectorAll("#bestsaler .giohang");
+var cart = document.querySelector('#sanpham');
+var countBtn = 0;
+function addProduct(item) {
+    em.style.display = 'none';
+    var bo = item.parentElement.parentElement.parentElement.parentElement.querySelector(".product").cloneNode(true);
+    var deleteBtn = bo.querySelector(".delete");
+    deleteBtn.addEventListener("click", function () {
+        bo.remove();
+        // tinhTien();
+        countBtn--;
+        updateCount();
+    });
+    cart.appendChild(bo);
+    // tinhTien();
+    countBtn++;
+    updateCount();
+}
+function updateCount(){
+    var soluongsp = document.querySelector(".soluongsp");
+    soluongsp.textContent = countBtn;
+}
+
+for (const item of btnAdd) {
+    item.onclick = function () {   
+        addProduct(this);
+    };
+}
+function removeProduct(item) {
+    table_cart.removeChild(item.parentElement.parentElement);
+    tinhTien();
+}
+// Mua ngay js

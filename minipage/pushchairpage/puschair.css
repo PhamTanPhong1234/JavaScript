@@ -158,6 +158,10 @@
     height: 100%;
 
 }
+#product{
+    width: 100%;
+    height: 100%;
+}
 
 #sanpham #product1,#sanpham #product2,#sanpham #product3,#sanpham #product4,#sanpham #product5 {
     width: 100%;
@@ -220,6 +224,6 @@
     color: #f4f4f4;
 }
 #product{
-    display: none;
+    /* display: none; */
 }
 /* san pham */

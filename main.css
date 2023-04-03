@@ -808,6 +808,12 @@ html::-webkit-scrollbar-thumb {
     font-size: 30px;
 }
 
+
+
 /* footer */
 /* Body */
 /* minipage */
+
+#bestsaler .product{
+    display: none;
+}
