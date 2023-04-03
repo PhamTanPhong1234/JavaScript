@@ -230,20 +230,21 @@ var price = document.querySelector('.price');
 var btnAdd = document.querySelectorAll("#bestsaler .giohang");
 var cart = document.querySelector('#sanpham');
 var countBtn = 0;
+var plusAdd = document.querySelectorAll('#body plus');
 function addProduct(item) {
     em.style.display = 'none';
     var bo = item.parentElement.parentElement.parentElement.parentElement.querySelector(".product").cloneNode(true);
     var deleteBtn = bo.querySelector(".delete");
     deleteBtn.addEventListener("click", function () {
         bo.remove();
-        // tinhTien();
         countBtn--;
-        updateCount();
+        updateCount(); 
+        tinhTien();
     });
     cart.appendChild(bo);
-    // tinhTien();
     countBtn++;
-    updateCount();
+    updateCount(); 
+      tinhTien();
 }
 function updateCount(){
     var soluongsp = document.querySelector(".soluongsp");
@@ -255,8 +256,20 @@ for (const item of btnAdd) {
         addProduct(this);
     };
 }
-function removeProduct(item) {
-    table_cart.removeChild(item.parentElement.parentElement);
-    tinhTien();
+for (const item of plusAdd) {
+    item.onclick = function () {   
+        addProduct(this);
+    };
+}
+
+function tinhTien() {
+    let bao = cart.getElementsByClassName('product');
+    var tong = 0;   
+    for (const item of bao) {
+        let td = item.getElementsByClassName('cost')[0];
+        let gia = parseInt(td.innerText);
+        tong += gia * 1;
+    }
+    price.innerText = "$" +" "+ tong ;
 }
 // Mua ngay js
