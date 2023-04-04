@@ -321,10 +321,11 @@ window.addEventListener("scroll", function () {
         navbar.style.backgroundColor = "#f4f4f4";
         navbar.style.opacity = "1";
         links.forEach(link => {
-            link.style.color = "black";
-            link.style.backgroundColor = "transparent";
             link.removeEventListener("mouseenter", null);
             link.removeEventListener("mouseleave", null);
+            link.style.color = "black";
+            link.style.backgroundColor = "transparent";
+
             link.addEventListener("mouseenter", function () {
                 link.style.color = "white";
                 link.style.backgroundColor = "black";
@@ -337,7 +338,7 @@ window.addEventListener("scroll", function () {
     }
 
     // Kiểm tra nếu trang đã cuộn về đầu trang
-    if (window.pageYOffset === 0 || window.pageYOffset <= 60) {
+    if (window.pageYOffset === 0 || window.pageYOffset <= 70) {
         links.forEach(link => {
             link.style.color = "white";
             link.style.backgroundColor = "transparent";
