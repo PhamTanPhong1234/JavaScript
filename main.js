@@ -238,7 +238,7 @@ for (const item1 of btnAdd) {
         addProduct1(this);
     };
 }
- for (const plusBtn of plusAdd) {
+for (const plusBtn of plusAdd) {
     plusBtn.addEventListener('click', function () {
         let item1 = this.parentElement.parentElement.parentElement.querySelector('.giohang');
         addProduct1(item1);
@@ -253,7 +253,7 @@ function addProduct1(item1) {
         countBtn--;
         updateCount();
         tinhTien();
-        if(countBtn == 0){
+        if (countBtn == 0) {
             em.style.display = 'block';
         }
     });
@@ -280,7 +280,69 @@ function tinhTien() {
 }
 
 
-
-
-
 // Mua ngay js
+// Thiết lập các giá trị ban đầu cho các thuộc tính của các thẻ a trong thanh navigation
+var initialStyles = {
+    color: "white",
+    backgroundColor: "transparent"
+};
+
+window.addEventListener("scroll", function () {
+    var navbar = document.querySelector("#nav");
+    var links = document.querySelectorAll("#nav a");
+
+    // Nếu thanh navigation nằm trên đầu trang
+
+    if (window.pageYOffset < 100) {
+        navbar.style.backgroundColor = "transparent";
+        navbar.style.opacity = "1";
+        links.forEach(link => {
+            link.style.color = "black";
+            link.style.backgroundColor = "transparent";
+            link.removeEventListener("mouseenter", null);
+            link.removeEventListener("mouseleave", null);
+            link.addEventListener("mouseenter", function () {
+                link.style.color = "black";
+                link.style.backgroundColor = "White";
+                return link;
+            });
+            link.addEventListener("mouseleave", function () {
+                link.style.color = "white";
+                link.style.backgroundColor = "transparent";
+            });
+        });
+
+    }
+
+
+
+    // Nếu thanh navigation được cuộn qua phía trên
+    else {
+        navbar.style.backgroundColor = "#f4f4f4";
+        navbar.style.opacity = "1";
+        links.forEach(link => {
+            link.style.color = "black";
+            link.style.backgroundColor = "transparent";
+            link.removeEventListener("mouseenter", null);
+            link.removeEventListener("mouseleave", null);
+            link.addEventListener("mouseenter", function () {
+                link.style.color = "white";
+                link.style.backgroundColor = "black";
+            });
+            link.addEventListener("mouseleave", function () {
+                link.style.color = "black";
+                link.style.backgroundColor = "transparent";
+            });
+        });
+    }
+
+    // Kiểm tra nếu trang đã cuộn về đầu trang
+    if (window.pageYOffset === 0 || window.pageYOffset <= 60) {
+        links.forEach(link => {
+            link.style.color = "white";
+            link.style.backgroundColor = "transparent";
+
+        });
+    }
+});
+
