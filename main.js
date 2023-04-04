@@ -253,6 +253,9 @@ function addProduct1(item1) {
         countBtn--;
         updateCount();
         tinhTien();
+        if(countBtn == 0){
+            em.style.display = 'block';
+        }
     });
     cart.appendChild(bo1);
     countBtn++;
@@ -275,7 +278,6 @@ function tinhTien() {
     }
     price.innerHTML = "$" + " " + tong;
 }
-
 
 
 

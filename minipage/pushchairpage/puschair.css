@@ -5,6 +5,7 @@
     font-family: 'Lexend Deca', sans-serif;
 
 }
+
 #puschair {
     width: 100%;
     height: 100vh;
@@ -37,7 +38,7 @@
     height: 60vh;
     padding: 0 24px;
     padding-bottom: 40px;
-    overflow:auto;
+    overflow: auto;
 }
 
 #sanpham .thongbao {
@@ -158,12 +159,21 @@
     height: 100%;
 
 }
-#product{
+
+#sanpham::-webkit-scrollbar {
+    width: 1px;
+}
+    
+#product {
     width: 100%;
     height: 100%;
 }
 
-#sanpham #product1,#sanpham #product2,#sanpham #product3,#sanpham #product4,#sanpham #product5 {
+#sanpham #product1,
+#sanpham #product2,
+#sanpham #product3,
+#sanpham #product4,
+#sanpham #product5 {
     width: 100%;
     height: 80px;
     display: flex;
@@ -176,26 +186,32 @@
     height: 100%;
     float: left;
 }
-#sanpham #product1 .imgproduct{
+
+#sanpham #product1 .imgproduct {
     background: url('../../img/mx-keys-mini-combo-business-gallery-us-graphite-1.png') no-repeat center center;
     background-size: 100%;
 }
-#sanpham #product2 .imgproduct{
+
+#sanpham #product2 .imgproduct {
     background: url('../../img/4k-pro-gallery-1.png') no-repeat center center;
     background-size: 100%;
 }
-#sanpham #product3 .imgproduct{
+
+#sanpham #product3 .imgproduct {
     background: url('../../img/folio-touch-air-gallery-1.png') no-repeat center center;
     background-size: 100%;
 }
-#sanpham #product4 .imgproduct{
+
+#sanpham #product4 .imgproduct {
     background: url('../../img/ggt-1.png') no-repeat center center;
     background-size: 100%;
 }
-#sanpham #product5 .imgproduct{
+
+#sanpham #product5 .imgproduct {
     background: url('../../img/zone-vibe-100-gallery-white-1.png') no-repeat center center;
     background-size: 100%;
 }
+
 #sanpham h6 {
     position: absolute;
     bottom: 10px;
@@ -223,7 +239,9 @@
     font-size: 18px;
     color: #f4f4f4;
 }
-#product{
+
+#product {
     /* display: none; */
 }
+
 /* san pham */
