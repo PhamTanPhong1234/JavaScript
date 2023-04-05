@@ -39,6 +39,67 @@ html::-webkit-scrollbar-thumb {
     background: url('./img/cw12_mainbanner_logitech-workplace-de.jpg') no-repeat left center;
 }
 
+#toast {
+    position: fixed;
+    bottom: 10px;
+    right: 0px;
+    z-index: 999999;
+    margin: 12px 0;
+}
+
+.toast {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background:linear-gradient(90deg,rgb(0, 132, 255),rgb(121, 156, 245),rgb(130, 177, 253));
+    border-radius: 40px;
+    padding: 20px 0;
+    width: 350px;
+    height: 10px;
+    color: #f4f4f4;
+    box-shadow:1px 1px 1px rgba(0, 0, 0, 0.3);
+    transition: all linear 0.3s;
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(calc(100% + 32px));
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeOut {
+    to {
+        opacity: 0;
+    }
+}
+
+.toast--success {
+    border-color:none;
+}
+
+.toast--success .toast__icon {
+    color: #59ff7a;
+    margin-right: 10px;
+}
+
+.toast__close {
+    font-size: 20px;
+    color: rgba(255, 255, 255, 0.524);
+    cursor: pointer;
+    padding-left: 10px;
+    transition: 0.3s;
+}
+.toast__close:hover {
+    color: red;
+
+}
+
 #nav {
     top: 0;
     position: fixed;

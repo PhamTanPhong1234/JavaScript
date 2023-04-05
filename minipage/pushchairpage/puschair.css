@@ -18,7 +18,8 @@
     z-index: 99999;
     display: none;
 }
-#pushair::before{
+
+#pushair::before {
     content: "";
     display: block;
     position: absolute;
@@ -40,7 +41,8 @@
 #puschair #box img {
     margin-left: 40%;
 }
-#puschair #emty{
+
+#puschair #emty {
     float: left;
     width: 70%;
     height: 100%;
@@ -177,7 +179,7 @@
 #sanpham::-webkit-scrollbar {
     width: 1px;
 }
-    
+
 #product {
     width: 100%;
     height: 100%;
@@ -230,6 +232,40 @@
     position: absolute;
     bottom: 10px;
     left: 105px;
+}
+
+#sanpham .themsp {
+    width: 100px;
+    /* padding: 0px 20px; */
+    position: absolute;
+    bottom: 6px;
+    right: 40px;
+    display: flex;
+
+
+}
+
+#sanpham .themsp button {
+    margin-top: 5px;
+    background: none;
+    border: 1px solid rgba(0, 0, 0, 0.28);
+    border-radius: 4px;
+    width: 17px;
+    height: 17px;
+    font-size: 10px;
+    transition: all 0.3s ease;
+
+}
+
+#sanpham .themsp button:hover {
+    color: white;
+    background-color: black;
+}
+
+#sanpham .themsp span {
+    font-size: 14px;
+    padding-top: 4px;
+    margin: 0 10px;
 }
 
 #sanpham .name {
