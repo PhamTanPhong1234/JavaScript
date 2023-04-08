@@ -18,17 +18,19 @@
     z-index: 99999;
     display: none;
 }
-
-#pushair::before {
-    content: "";
-    display: block;
+#puschair #quantity{
     position: absolute;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    transform: translateX(100%);
-    transition: all 0.3s ease;
+    bottom: 8px;
+    right: 76px;
+    width:30px;
+    height: 19px;
+    background-color: #f4f4f4;
+    border-radius: 5px;
+    border: 1px solid black ;
+    font-size: 10px;
+    text-align: center;
 }
+
 
 #puschair #box {
     width: 30%;
@@ -53,7 +55,7 @@
     width: 100%;
     height: 60vh;
     padding: 0 24px;
-    padding-bottom: 40px;
+    padding-bottom: 40px; 
     overflow: auto;
 }
 

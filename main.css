@@ -41,23 +41,23 @@ html::-webkit-scrollbar-thumb {
 
 #toast {
     position: fixed;
-    bottom: 10px;
-    right: 0px;
+    bottom: 15px;
+    right: 3px;
     z-index: 999999;
-    margin: 12px 0;
+    margin-top: 10px;
 }
 
 .toast {
     display: flex;
     align-items: center;
     justify-content: center;
-    background:linear-gradient(90deg,rgb(0, 132, 255),rgb(121, 156, 245),rgb(130, 177, 253));
+    background: linear-gradient(90deg, rgb(0, 132, 255), rgb(121, 156, 245), rgb(130, 177, 253));
     border-radius: 40px;
     padding: 20px 0;
     width: 350px;
     height: 10px;
     color: #f4f4f4;
-    box-shadow:1px 1px 1px rgba(0, 0, 0, 0.3);
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
     transition: all linear 0.3s;
 }
 
@@ -80,7 +80,7 @@ html::-webkit-scrollbar-thumb {
 }
 
 .toast--success {
-    border-color:none;
+    border-color: none;
 }
 
 .toast--success .toast__icon {
@@ -95,6 +95,7 @@ html::-webkit-scrollbar-thumb {
     padding-left: 10px;
     transition: 0.3s;
 }
+
 .toast__close:hover {
     color: red;
 
@@ -158,13 +159,13 @@ html::-webkit-scrollbar-thumb {
 
 
 #header .button {
-
     width: 290px;
     height: 50px;
     font-size: 20px;
     background-color: #FFF;
     font-weight: bolder;
     color: #2f3132;
+    cursor: pointer;
     letter-spacing: 3px;
     border: 1px solid #fff;
     transition: background-color 0.3s, color 0.3s, opacity 0.3s;
@@ -191,6 +192,7 @@ html::-webkit-scrollbar-thumb {
     padding: 0 13px;
     font-weight: bold;
     line-height: 35px;
+    cursor: pointer;
 }
 
 .shopping_cart #cart:hover {
@@ -301,7 +303,7 @@ html::-webkit-scrollbar-thumb {
 .grid-container {
     margin-top: 50px;
     display: grid;
-    grid-template-columns: 500px 500px 365px;
+    grid-template-columns: 500px 500px 370px;
     grid-template-rows: 200px 200px 200px;
     grid-gap: 15px;
 
@@ -356,8 +358,15 @@ html::-webkit-scrollbar-thumb {
 
 .item1:hover img {
     transform: scale(1.1);
+
 }
 
+#bestsaler {}
+
+#bestsaler .eye,
+#bestsaler .plus {
+    cursor: pointer;
+}
 
 
 
@@ -439,12 +448,14 @@ html::-webkit-scrollbar-thumb {
 }
 
 .item2 .push .eye {
+
     padding: 5px 10px;
     font-size: 20px;
     font-weight: bolder;
 }
 
 .item2 .push .plus {
+
     padding: 5px 10px;
     font-size: 20px;
     font-weight: bolder;
@@ -659,42 +670,85 @@ html::-webkit-scrollbar-thumb {
     width: 100%;
     height: 80vh;
     display: flex;
-}
-
-.slideshow {
-    width: 90%;
-    height: 80vh;
-    background: url('./img/environment-og-image.png') no-repeat center center;
-    background-size: 95%;
     position: relative;
 }
 
-.slideshow .icon {
-    color: #fff;
-    font-size: 140px;
-    font-weight: bolder;
-    position: absolute;
-    top: 100px;
-    right: 300px;
+.slideshow {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.slideshow #slideshowbox {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.slideshow .anh {
+    flex: 0 0 100%;
+    height: 100%;
+    background-color: blue;
+}
+
+.slideshow #anh1 {
+    background: url('./img/Banner2.png') no-repeat center center;
+    background-size: 120%;
 
 }
 
-.slideshow h4 {
+.slideshow #anh2 {
+    background: url('./img/ezgif.com-gif-maker.jpg') no-repeat left top;
+    background-size: 100%;
+}
+
+.slideshow #anh3 {
+    background: url('./img/banner6.jpg') no-repeat left bottom;
+    background-size: 145%;
+}
+
+.slideshow #anh4 {
+    background: url('./img/Banner7.png') no-repeat center center;
+    background-size: 100%;
+}
+
+.slideshow #anh5 {
+    background: url('./img/mx-for-creativity-og-image.jpg') no-repeat center center;
+    background-size: 100%;
+}
+
+.slideshow #anh6 {
+    background: url('./img/feature-4.jpg') no-repeat center center;
+    opacity: 0.9;
+    background-size: 100%;
+}
+
+.slideshow #anh7 {
+    background: url('./img/panner77.png') no-repeat center center;
+    background-size: 100%;
+}
+
+
+#prevBtn,
+#nextBtn {
     position: absolute;
-    right: 150px;
-    top: 250px;
-    color: #fff;
+    top: calc(50% - 20px);
     font-size: 30px;
+    cursor: pointer;
+    z-index: 1;
+    user-select: none;
 }
 
-.slideshow .title {
-    position: absolute;
-    right: 237px;
-    top: 300px;
-    color: #fff;
-    font-weight: 300;
-
+#prevBtn {
+    left: 20px;
 }
+
+#nextBtn {
+    right: 20px;
+}
+
+
 
 .slideshow button {
     position: absolute;
@@ -709,12 +763,6 @@ html::-webkit-scrollbar-thumb {
     border: 1px solid #fff;
     transition: background-color 0.3s, color 0.3s, opacity 0.3s;
     text-transform: uppercase;
-}
-
-.slideshow button:hover {
-    background-color: rgba(255, 255, 255, 0.1);
-    color: #ffffff;
-
 }
 
 .bignextright,
@@ -737,44 +785,7 @@ html::-webkit-scrollbar-thumb {
     color: #FFF;
 }
 
-.dotcontain {
-    position: absolute;
-    width: 100%;
-}
 
-.dotcontain .posi {
-    width: 100%;
-    height: 100%;
-    position: relative;
-}
-
-.dotcontain ul {
-    position: absolute;
-    top: 575px;
-    left: 600px;
-    display: flex;
-    justify-content: center;
-}
-
-.dotcontain li {
-    width: 100%;
-    height: 50px;
-    top: 30px;
-    right: 60px;
-    list-style: none;
-    width: 11px;
-    height: 11px;
-    background-color: rgb(255, 255, 255);
-    margin: 0 5px;
-    display: inline-block;
-    border-radius: 100px;
-}
-
-.dotcontain .dot1 {
-    border: 2px solid white;
-    background-color: rgba(255, 255, 255, 0.1);
-
-}
 
 /* slideshow */
 /* footer */

@@ -230,9 +230,9 @@ var price = document.querySelector('.price');
 var btnAdd = document.querySelectorAll("#bestsaler .giohang");
 var cart = document.querySelector('#sanpham');
 var countBtn = 0;
+var inputElement = document.querySelector('input');
 var plusAdd = document.querySelectorAll('#bestsaler .plus');
-
-
+var MiniCounts = document.querySelectorAll('#product #quantity');
 for (const item1 of btnAdd) {
     item1.onclick = function () {
         addProduct1(this);
@@ -244,9 +244,11 @@ for (const plusBtn of plusAdd) {
         addProduct1(item1);
     });
 }
+
 function addProduct1(item1) {
     showSuccessToast();
     em.style.display = 'none';
+    countBtn++;
     var bo1 = item1.parentElement.parentElement.parentElement.parentElement.querySelector(".product").cloneNode(true);
     var deleteBtn = bo1.querySelector(".delete");
     deleteBtn.addEventListener("click", function () {
@@ -259,15 +261,17 @@ function addProduct1(item1) {
         }
     });
     cart.appendChild(bo1);
-    countBtn++;
     updateCount();
     tinhTien();
 }
+
+
+
+
 function updateCount() {
     var soluongsp = document.querySelector(".soluongsp");
-    soluongsp.textContent = countBtn;
+    soluongsp.innerHTML = countBtn;
 }
-
 
 function tinhTien() {
     let bao = cart.getElementsByClassName('product');
@@ -312,7 +316,8 @@ window.addEventListener("scroll", function () {
 
     }
     else {
-        navbar.style.backgroundColor = "#f4f4f4";
+        navbar.style.backgroundColor = "#fff";
+
         navbar.style.opacity = "1";
         links.forEach(link => {
             link.removeEventListener("mouseenter", null);
@@ -331,7 +336,7 @@ window.addEventListener("scroll", function () {
         });
     }
 
-    if (window.pageYOffset === 0 || window.pageYOffset <= 80) {
+    if (window.pageYOffset === 0 || window.pageYOffset <= 100) {
         links.forEach(link => {
             link.style.color = "white";
             link.style.backgroundColor = "transparent";
@@ -343,31 +348,31 @@ window.addEventListener("scroll", function () {
 function toast({ title = "", message = "", type = "info", duration = 1000 }) {
     const main = document.getElementById("toast");
     if (main) {
-      const toast = document.createElement("div");
-  
-      // Auto remove toast
-      const autoRemoveId = setTimeout(function () {
-        main.removeChild(toast);
-      }, duration + 500 );
-  
-      // Remove toast when clicked
-      toast.onclick = function (e) {
-        if (e.target.closest(".toast__close")) {
-          main.removeChild(toast);
-          clearTimeout(autoRemoveId);
-        }
-      };
-  
-      const icons = {
-        success: "fas fa-check-circle", 
-      };
-      const icon = icons[type];
-      const delay = (duration / 2000).toFixed(2);
-  
-      toast.classList.add("toast", `toast--${type}`);
-      toast.style.animation = `slideInLeft ease .3s, fadeOut linear 1s ${delay}s forwards`;
-  
-      toast.innerHTML = `
+        const toast = document.createElement("div");
+
+        // Auto remove toast
+        const autoRemoveId = setTimeout(function () {
+            main.removeChild(toast);
+        }, duration + 500);
+
+        // Remove toast when clicked
+        toast.onclick = function (e) {
+            if (e.target.closest(".toast__close")) {
+                main.removeChild(toast);
+                clearTimeout(autoRemoveId);
+            }
+        };
+
+        const icons = {
+            success: "fas fa-check-circle",
+        };
+        const icon = icons[type];
+        const delay = (duration / 1000).toFixed(2);
+
+        toast.classList.add("toast", `toast--${type}`);
+        toast.style.animation = `slideInLeft ease .3s, fadeOut linear 1s ${delay}s forwards`;
+
+        toast.innerHTML = `
                       <div class="toast__icon">
                           <i class="${icon}"></i>
                       </div>
@@ -379,14 +384,75 @@ function toast({ title = "", message = "", type = "info", duration = 1000 }) {
                           <i class="fas fa-times"></i>
                       </div>
                   `;
-      main.appendChild(toast);
+        main.appendChild(toast);
     }
-  }
-  function showSuccessToast() {
+}
+function showSuccessToast() {
     toast({
-    //   title: "Thành công!",
-      message: "Thêm vào giỏ hàng thành công !",
-      type: "success",
-      duration: 5000
+        //   title: "Thành công!",
+        message: "Thêm vào giỏ hàng thành công !",
+        type: "success",
+        duration: 2000
     });
-  }
+}
+
+let slideIndex = 0;
+const slideBox = document.getElementById('slideshowbox');
+const prevBtn = document.querySelector('.bignextleft');
+const nextBtn = document.querySelector('.bignextright');
+
+// Hàm chuyển slide
+function slideTo(index) {
+    slideIndex = index;
+    slideBox.style.transform = `translateX(-${slideIndex * 100}%)`;
+}
+
+// Hàm chuyển slide sang trái
+function slideLeft() {
+    if (slideIndex === 0) {
+        slideIndex = 6;
+    } else {
+        slideIndex--;
+    }
+    slideTo(slideIndex);
+}
+
+// Hàm chuyển slide sang phải
+function slideRight() {
+    if (slideIndex === 6) {
+        slideIndex = 0;
+    } else {
+        slideIndex++;
+    }
+    slideTo(slideIndex);
+}
+
+// Sự kiện click nút prev
+prevBtn.addEventListener('click', slideLeft);
+
+// Sự kiện click nút next
+nextBtn.addEventListener('click', slideRight);
+
+// Hàm tự động chuyển slide sau một khoảng thời gian
+function autoSlide() {
+    slideRight();
+}
+
+// Đặt interval cho hàm tự động chuyển slide
+let slideInterval = setInterval(autoSlide, 3000);
+
+// Hàm dừng interval khi rê chuột vào slide
+function stopSlideInterval() {
+    clearInterval(slideInterval);
+}
+
+// Hàm khởi động lại interval khi rê chuột ra khỏi slide
+function startSlideInterval() {
+    slideInterval = setInterval(autoSlide, 3000);
+}
+
+// Sự kiện hover vào slide để dừng interval
+slideBox.addEventListener('mouseenter', stopSlideInterval);
+
+// Sự kiện hover ra khỏi slide để khởi động lại interval
+slideBox.addEventListener('mouseleave', startSlideInterval);
