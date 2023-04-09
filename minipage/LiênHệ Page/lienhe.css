@@ -1,0 +1,149 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Lexend Deca', sans-serif;
+}
+
+body{
+    height: 500vh;
+}
+#header {
+    position: relative;
+    width: 100%;
+    height: 480px;
+    background: url('./../../img/banner6.jpg') no-repeat left bottom;
+    background-color: #2f3132;
+}
+
+#nav {
+    width: 100%;
+    height: 50px;
+    border-radius: 3px;
+ 
+    transition: all 0.3s;
+}
+
+#nav ul {
+    display: block;   background-color: rgb(0, 0, 0) ;
+    float: left;
+    width: 600px;
+    height: 60px;
+    border-top-right-radius: 9px;
+    border-bottom-right-radius: 100px;
+    padding-left: 18px;
+    padding-top: 13px;
+}
+
+#nav .nav li {
+    display: inline;
+
+}
+
+.nav li a {
+    padding: 0 24px;
+    line-height: 35px;
+    text-decoration: none;
+    color: #fff;
+    font-weight: bolder;
+    letter-spacing: 1px;
+    font-size: 15px;
+}
+
+.nav li:hover a {
+    background-color: #fff;
+    border-radius: 100px;
+    color: #2f3132;
+    display: inline-block;
+
+}
+
+
+#header .center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    line-height: 80px;
+}
+
+#header h3 {
+    font-size:80px;
+    color: #50b0ea;
+    transition: 0.3s;
+}
+#header h3:hover{
+    font-size: 90px;
+}
+
+
+#header .button {
+    width: 290px;
+    height: 50px;
+    font-size: 20px;
+    background-color: #FFF;
+    font-weight: bolder;
+    color: #2f3132;
+    cursor: pointer;
+    letter-spacing: 3px;
+    border: 1px solid #fff;
+    transition: background-color 0.3s, color 0.3s, opacity 0.3s;
+}
+
+#header button:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+
+}
+
+.shopping_cart {
+    float: right;
+    font-size: 20px;
+    margin-top: 10px;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+
+.shopping_cart #cart {
+    color: #50b0ea;
+    text-decoration: none;
+    padding: 0 13px;
+    font-weight: bold;
+    line-height: 35px;
+    cursor: pointer;
+}
+
+.shopping_cart #cart:hover {
+    background-color: #fff;
+    border-radius: 100px;
+    color: #2f3132;
+    display: inline-block;
+
+}
+
+.loginbutton {
+    float: right;
+    font-size: 25px;
+    margin-top: 9px;
+}
+
+.loginbutton a {
+    color: #50b0ea;
+    text-decoration: none;
+    padding: 6px 13px;
+    border-radius: 100px;
+    line-height: 35px;
+    transition: 0.3s;
+}
+.loginbutton a:hover{
+    background-color: #FFF;
+    color: #2f3132;
+    font-size: 30px;
+}
+
+.loginbutton .login {
+    font-weight: bold;
+    line-height: 13px;
+}
