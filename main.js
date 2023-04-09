@@ -456,3 +456,19 @@ slideBox.addEventListener('mouseenter', stopSlideInterval);
 
 // Sự kiện hover ra khỏi slide để khởi động lại interval
 slideBox.addEventListener('mouseleave', startSlideInterval);
+
+
+
+// ẩn hiện password
+    function togglePasswordVisibility() {
+        var passwordField = document.getElementById("passwordField"); 
+        var toggleButton = document.querySelector(".togglePassword");
+
+        if (passwordField.type === "password") { 
+            passwordField.type = "text";
+            toggleButton.classList.add("visible"); 
+        } else {
+            passwordField.type = "password";
+            toggleButton.classList.remove("visible"); 
+        }
+    }
