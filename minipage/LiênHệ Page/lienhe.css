@@ -6,7 +6,7 @@
 }
 
 body{
-    height: 500vh;
+    height: 280vh;
 }
 #header {
     position: relative;
@@ -146,4 +146,148 @@ body{
 .loginbutton .login {
     font-weight: bold;
     line-height: 13px;
+}
+#body{
+    height: 100vh;
+}
+
+/* end: header */
+  
+#box-company {
+    padding-top:100px;
+    width: 100%;
+    height: 50vh;
+    /* background-color: #50b0ea; */
+}   
+#box-company h2{
+    color: #2f3132;
+}   
+.title{
+    width: 80%;
+    height: 50px;
+    margin: auto auto;
+}
+.line {
+    margin-top: 30px;
+    width: 100%;
+    height: 1.5px;
+    background-color: #2f3132;
+}
+.box {
+    color:#2f3132 ;
+    width: 80%;
+    height: 200px;
+    margin: 30px auto;
+    display: flex;
+    gap: 30px;
+}
+.box .box1 .t,.box .box2 .t{
+   line-height: 60px;
+}
+.box .p{
+    line-height: 25px;
+    font-weight: 200;
+    font-size: 17px;
+}
+.box2 .box11 .p{
+    line-height: 50px;
+    font-weight: 300;
+}
+#footer {
+    margin-top: 350px;
+    position: relative;
+    width: 100%;
+    height: 80vh;
+    background-color: #262a2c;
+}
+
+#footer .box {
+    width: 100%;
+    height: 40vh;
+    display: flex;
+}
+
+#footer .gioithieu {
+
+    margin: 0 100px;
+}
+
+#footer h2 {
+    margin-top: 100px;
+    color: #fff;
+    font-size: 15px;
+}
+
+#footer li {
+    list-style: none;
+    padding: 15px 0px;
+}
+
+#footer a {
+
+    font-weight: 100;
+    color: #fff;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+#footer a:hover {
+    text-decoration: #c4c6c8 underline;
+
+}
+
+#footer .line {
+    position: absolute;
+    top: 470px;
+    left: 100px;
+    width: 86%;
+    height: 1px;
+    background-color: #c4c6c8;
+}
+
+.social {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    height: 10vh;
+
+}
+
+.social img {
+    margin-left: 100px;
+    margin-top: 10px;
+    width: 100px;
+}
+
+.social h6 {
+    position: absolute;
+    top: 21px;
+    left: 220px;
+    z-index: 1;
+    color: #fff;
+    font-weight: 200;
+    letter-spacing: 1px;
+}
+
+.social .network {
+    display: flex;
+    float: right;
+    margin-right: 80px;
+
+}
+
+.social .network a {
+    padding: 0 15px;
+}
+
+.social .network i {
+    color: #979b9b;
+    font-size: 25px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.social .network i:hover {
+    color: #fff;
+    font-size: 30px;
 }
