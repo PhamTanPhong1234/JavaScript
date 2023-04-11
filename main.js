@@ -233,6 +233,7 @@ var countBtn = 0;
 var inputElement = document.querySelector('input');
 var plusAdd = document.querySelectorAll('#bestsaler .plus');
 var MiniCounts = document.querySelectorAll('#product #quantity');
+var input = document.querySelectorAll("#sanpham #quantity");
 for (const item1 of btnAdd) {
     item1.onclick = function () {
         addProduct1(this);
@@ -471,4 +472,25 @@ slideBox.addEventListener('mouseleave', startSlideInterval);
             passwordField.type = "password";
             toggleButton.classList.remove("visible"); 
         }
+    }
+
+
+    function sumInputs() {
+        var inputElements = document.querySelectorAll(".product #quantity");
+        var total = 0;
+  
+        for (var i = 0; i < inputElements.length; i++) {
+          var inputValue = parseInt(inputElements[i].value);
+          if (!isNaN(inputValue)) {
+            total += inputValue;
+          }
+        }
+  
+        document.getElementsByClassName("soluongsp").textContent = total;
+      }
+    
+
+
+    function muahang(){
+        alert("Bạn Đã mua hàng thành công !!" );
     }
