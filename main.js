@@ -1,4 +1,4 @@
-// open and close the pushchair
+// Hiển thị và ẩn cart
 var div = document.getElementById('puschair');
 function openBtn() {
     div.style.display = "block";
@@ -6,6 +6,9 @@ function openBtn() {
 function closeBtn() {
     div.style.display = "none";
 }
+// Hiển thị và ẩn cart
+
+// Hiển thị và ẩn các thẻ present /giới thiệu
 const pr1 = document.querySelector("#present1main");
 const pr2 = document.querySelector("#present2main");
 const pr3 = document.querySelector("#present3main");
@@ -44,10 +47,10 @@ function closePr5() {
     pr5.style.display = "none";
 
 }
+// Hiển thị và ẩn các thẻ present /giới thiệu
 
-// open and close the pushchair
 
-// scoll display
+// cuộn chuột khi nhấn vào nút "Khám phá ngay"
 
 const button = document.querySelector('.button');
 const element = document.querySelector('#present');
@@ -55,9 +58,9 @@ button.addEventListener('click', () => {
     element.scrollIntoView({ behavior: 'smooth' });
 });
 
-// scoll display
-// present
+// cuộn chuột khi nhấn vào nút "Khám phá ngay"
 
+// Show hình ảnh khi nhấn vào ô tương ứng
 
 const div1present = document.querySelector("#present1main .bigimg");
 const img11 = document.querySelector("#present1main .img1");
@@ -220,11 +223,11 @@ function clickImg15() {
     img25.style.borderBottom = "none";
     img35.style.borderBottom = "none";
 };
-// present
+// Show hình ảnh khi nhấn vào ô tương ứng
 
-// Mua ngay js 
 
-// san pham 1
+// Mua hàng
+
 var em = document.querySelector('#sanpham .thongbao');
 var price = document.querySelector('.price');
 var btnAdd = document.querySelectorAll("#bestsaler .giohang");
@@ -285,8 +288,10 @@ function tinhTien() {
     price.innerHTML = "$" + " " + tong;
 }
 
+// mua hàng
 
-// Mua ngay js
+
+// Chuyển màu header
 var initialStyles = {
     color: "white",
     backgroundColor: "transparent"
@@ -345,18 +350,19 @@ window.addEventListener("scroll", function () {
         });
     }
 });
-// success
+// Chuyển màu header
+
+
+// Show thông báo thành công
 function toast({ title = "", message = "", type = "info", duration = 1000 }) {
     const main = document.getElementById("toast");
     if (main) {
         const toast = document.createElement("div");
 
-        // Auto remove toast
         const autoRemoveId = setTimeout(function () {
             main.removeChild(toast);
         }, duration + 500);
 
-        // Remove toast when clicked
         toast.onclick = function (e) {
             if (e.target.closest(".toast__close")) {
                 main.removeChild(toast);
@@ -390,25 +396,27 @@ function toast({ title = "", message = "", type = "info", duration = 1000 }) {
 }
 function showSuccessToast() {
     toast({
-        //   title: "Thành công!",
+
         message: "Thêm vào giỏ hàng thành công !",
         type: "success",
         duration: 2000
     });
 }
+// Show thông báo thành công
 
+
+
+// slide show
 let slideIndex = 0;
 const slideBox = document.getElementById('slideshowbox');
 const prevBtn = document.querySelector('.bignextleft');
 const nextBtn = document.querySelector('.bignextright');
 
-// Hàm chuyển slide
 function slideTo(index) {
     slideIndex = index;
     slideBox.style.transform = `translateX(-${slideIndex * 100}%)`;
 }
 
-// Hàm chuyển slide sang trái
 function slideLeft() {
     if (slideIndex === 0) {
         slideIndex = 6;
@@ -418,7 +426,7 @@ function slideLeft() {
     slideTo(slideIndex);
 }
 
-// Hàm chuyển slide sang phải
+
 function slideRight() {
     if (slideIndex === 6) {
         slideIndex = 0;
@@ -428,69 +436,59 @@ function slideRight() {
     slideTo(slideIndex);
 }
 
-// Sự kiện click nút prev
+
 prevBtn.addEventListener('click', slideLeft);
 
-// Sự kiện click nút next
+
 nextBtn.addEventListener('click', slideRight);
 
-// Hàm tự động chuyển slide sau một khoảng thời gian
+
 function autoSlide() {
     slideRight();
 }
 
-// Đặt interval cho hàm tự động chuyển slide
+
 let slideInterval = setInterval(autoSlide, 3000);
 
-// Hàm dừng interval khi rê chuột vào slide
+
 function stopSlideInterval() {
     clearInterval(slideInterval);
 }
 
-// Hàm khởi động lại interval khi rê chuột ra khỏi slide
+
 function startSlideInterval() {
     slideInterval = setInterval(autoSlide, 3000);
 }
 
-// Sự kiện hover vào slide để dừng interval
-slideBox.addEventListener('mouseenter', stopSlideInterval);
 
-// Sự kiện hover ra khỏi slide để khởi động lại interval
+slideBox.addEventListener('mouseenter', stopSlideInterval);
 slideBox.addEventListener('mouseleave', startSlideInterval);
+// slide show
 
 
 
 // ẩn hiện password
-    function togglePasswordVisibility() {
-        var passwordField = document.getElementById("passwordField"); 
-        var toggleButton = document.querySelector(".togglePassword");
+function togglePasswordVisibility() {
+    var passwordField = document.getElementById("passwordField");
+    var toggleButton = document.querySelector(".togglePassword");
 
-        if (passwordField.type === "password") { 
-            passwordField.type = "text";
-            toggleButton.classList.add("visible"); 
-        } else {
-            passwordField.type = "password";
-            toggleButton.classList.remove("visible"); 
-        }
+    if (passwordField.type === "password") {
+        passwordField.type = "text";
+        toggleButton.classList.add("visible");
+    } else {
+        passwordField.type = "password";
+        toggleButton.classList.remove("visible");
     }
+}
+// ẩn hiện password
 
 
-    function sumInputs() {
-        var inputElements = document.querySelectorAll(".product #quantity");
-        var total = 0;
-  
-        for (var i = 0; i < inputElements.length; i++) {
-          var inputValue = parseInt(inputElements[i].value);
-          if (!isNaN(inputValue)) {
-            total += inputValue;
-          }
-        }
-  
-        document.getElementsByClassName("soluongsp").textContent = total;
-      }
-    
-
-
-    function muahang(){
-        alert("Bạn Đã mua hàng thành công !!" );
+// thông báo khi mua hàng
+function muahang() {
+    if(countBtn == 0){
+        alert("OOP! CHƯA CÓ SẢN PHẨM TRONG GIỎ HÀNG!");
+    }else{
+        alert("Cảm ơn bạn đã mua sản phẩm!");
     }
+}
+// thông báo khi mua hàng
