@@ -123,6 +123,25 @@
     top: 0px;
     left: 43%;
 
+}.total .thongbao{
+    display: none;
+}
+.delete-all{
+    position: absolute;
+    bottom: 75px;
+    right: 0;
+    height: 30px;
+    width:50px;
+    border: 1px solid black;
+    border-radius: 3px;
+    background-color: transparent;
+    transition: 0.3s;
+}
+.delete-all:hover{
+    background-color:red ;
+    color: #fff;
+    font-size: 15px;
+
 }
 
 .total #button {

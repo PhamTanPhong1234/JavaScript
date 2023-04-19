@@ -228,15 +228,14 @@ function clickImg15() {
 
 // Mua hàng
 
-var em = document.querySelector('#sanpham .thongbao');
+var em1 = document.querySelector('#sanpham .thongbao');
+var em2 = document.querySelector(".total .thongbao")
 var price = document.querySelector('.price');
 var btnAdd = document.querySelectorAll("#bestsaler .giohang");
 var cart = document.querySelector('#sanpham');
 var countBtn = 0;
-var inputElement = document.querySelector('input');
 var plusAdd = document.querySelectorAll('#bestsaler .plus');
-var MiniCounts = document.querySelectorAll('#product #quantity');
-var input = document.querySelectorAll("#sanpham #quantity");
+const xoahet = document.querySelector('.delete-all');
 for (const item1 of btnAdd) {
     item1.onclick = function () {
         addProduct1(this);
@@ -251,7 +250,7 @@ for (const plusBtn of plusAdd) {
 
 function addProduct1(item1) {
     showSuccessToast();
-    em.style.display = 'none';
+    em1.style.display = 'none';
     countBtn++;
     var bo1 = item1.parentElement.parentElement.parentElement.parentElement.querySelector(".product").cloneNode(true);
     var deleteBtn = bo1.querySelector(".delete");
@@ -261,17 +260,13 @@ function addProduct1(item1) {
         updateCount();
         tinhTien();
         if (countBtn == 0) {
-            em.style.display = 'block';
+            em1.style.display = 'block';
         }
     });
     cart.appendChild(bo1);
     updateCount();
     tinhTien();
 }
-
-
-
-
 function updateCount() {
     var soluongsp = document.querySelector(".soluongsp");
     soluongsp.innerHTML = countBtn;
@@ -288,6 +283,23 @@ function tinhTien() {
     price.innerHTML = "$" + " " + tong;
 }
 
+function delete_all() {
+    cart.innerHTML = '';
+    countBtn = 0;
+    updateCount();
+    tinhTien();
+    cart.appendChild(em2);
+}
+xoahet.addEventListener('click', function () {
+
+    var result = confirm("Bạn có muốn xóa hết giỏ hàng không ?");
+    if (result == true) {
+        delete_all();
+    } else {
+        alert("Hãy tiếp tục mua sắm nhé!!!");
+    }
+
+});
 // mua hàng
 
 
@@ -485,9 +497,9 @@ function togglePasswordVisibility() {
 
 // thông báo khi mua hàng
 function muahang() {
-    if(countBtn == 0){
+    if (countBtn == 0) {
         alert("OOP! CHƯA CÓ SẢN PHẨM TRONG GIỎ HÀNG!");
-    }else{
+    } else {
         alert("Cảm ơn bạn đã mua sản phẩm!");
     }
 }
