@@ -50,15 +50,15 @@ function closePr5() {
 // Hiển thị và ẩn các thẻ present /giới thiệu
 
 
-// cuộn chuột khi nhấn vào nút "Khám phá ngay"
+// // cuộn chuột khi nhấn vào nút "Khám phá ngay"
 
-const button = document.querySelector('.button');
-const element = document.querySelector('#present');
-button.addEventListener('click', () => {
-    element.scrollIntoView({ behavior: 'smooth' });
-});
+// const button = document.querySelector('.button');
+// const element = document.querySelector('#present');
+// button.addEventListener('click', () => {
+//     element.scrollIntoView({ behavior: 'smooth' });
+// });
 
-// cuộn chuột khi nhấn vào nút "Khám phá ngay"
+// // cuộn chuột khi nhấn vào nút "Khám phá ngay"
 
 // Show hình ảnh khi nhấn vào ô tương ứng
 
@@ -227,7 +227,6 @@ function clickImg15() {
 
 
 // Mua hàng
-
 var em1 = document.querySelector('#sanpham .thongbao');
 var em2 = document.querySelector(".total .thongbao")
 var price = document.querySelector('.price');
@@ -260,7 +259,7 @@ function addProduct1(item1) {
         updateCount();
         tinhTien();
         if (countBtn == 0) {
-            em1.style.display = 'block';
+            em1.style.display = 'block';  
         }
     });
     cart.appendChild(bo1);
@@ -291,7 +290,6 @@ function delete_all() {
     cart.appendChild(em2);
 }
 xoahet.addEventListener('click', function () {
-
     var result = confirm("Bạn có muốn xóa hết giỏ hàng không ?");
     if (result == true) {
         delete_all();
@@ -300,14 +298,19 @@ xoahet.addEventListener('click', function () {
     }
 
 });
+
+
+function muahang() {
+    if (countBtn == 0) {
+        alert("OOP! CHƯA CÓ SẢN PHẨM TRONG GIỎ HÀNG !");
+    } else {
+        alert("Cảm ơn bạn đã mua sản phẩm !");
+    }
+}
 // mua hàng
 
 
 // Chuyển màu header
-var initialStyles = {
-    color: "white",
-    backgroundColor: "transparent"
-};
 
 window.addEventListener("scroll", function () {
     var navbar = document.querySelector("#nav");
@@ -315,16 +318,12 @@ window.addEventListener("scroll", function () {
 
     if (window.pageYOffset < 100) {
         navbar.style.backgroundColor = "transparent";
-        navbar.style.opacity = "1";
-        links.forEach(link => {
-            link.style.color = "black";
-            link.style.backgroundColor = "transparent";
+        links.forEach(link => { 
             link.removeEventListener("mouseenter", null);
             link.removeEventListener("mouseleave", null);
             link.addEventListener("mouseenter", function () {
                 link.style.color = "black";
                 link.style.backgroundColor = "White";
-                return link;
             });
             link.addEventListener("mouseleave", function () {
                 link.style.color = "white";
@@ -335,14 +334,11 @@ window.addEventListener("scroll", function () {
     }
     else {
         navbar.style.backgroundColor = "#fff";
-
-        navbar.style.opacity = "1";
         links.forEach(link => {
             link.removeEventListener("mouseenter", null);
             link.removeEventListener("mouseleave", null);
             link.style.color = "black";
             link.style.backgroundColor = "transparent";
-
             link.addEventListener("mouseenter", function () {
                 link.style.color = "white";
                 link.style.backgroundColor = "black";
@@ -396,7 +392,6 @@ function toast({ title = "", message = "", type = "info", duration = 1000 }) {
                           <i class="${icon}"></i>
                       </div>
                       <div class="toast__body">
-                          <h3 class="toast__title">${title}</h3>
                           <p class="toast__msg">${message}</p>
                       </div>
                       <div class="toast__close">
@@ -408,7 +403,6 @@ function toast({ title = "", message = "", type = "info", duration = 1000 }) {
 }
 function showSuccessToast() {
     toast({
-
         message: "Thêm vào giỏ hàng thành công !",
         type: "success",
         duration: 2000
@@ -448,12 +442,8 @@ function slideRight() {
     slideTo(slideIndex);
 }
 
-
 prevBtn.addEventListener('click', slideLeft);
-
-
 nextBtn.addEventListener('click', slideRight);
-
 
 function autoSlide() {
     slideRight();
@@ -480,27 +470,17 @@ slideBox.addEventListener('mouseleave', startSlideInterval);
 
 
 // ẩn hiện password
-function togglePasswordVisibility() {
-    var passwordField = document.getElementById("passwordField");
-    var toggleButton = document.querySelector(".togglePassword");
+function anHienMk() {
+    var password = document.getElementById("passwordField");
+    var Button = document.querySelector(".togglePassword");
 
-    if (passwordField.type === "password") {
-        passwordField.type = "text";
-        toggleButton.classList.add("visible");
+    if (password.type === "password") {
+        password.type = "text";
+        Button.classList.add("visible");
     } else {
-        passwordField.type = "password";
-        toggleButton.classList.remove("visible");
+        password.type = "password";
+        Button.classList.remove("visible");
     }
 }
 // ẩn hiện password
 
-
-// thông báo khi mua hàng
-function muahang() {
-    if (countBtn == 0) {
-        alert("OOP! CHƯA CÓ SẢN PHẨM TRONG GIỎ HÀNG!");
-    } else {
-        alert("Cảm ơn bạn đã mua sản phẩm!");
-    }
-}
-// thông báo khi mua hàng
